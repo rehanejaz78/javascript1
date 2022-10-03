@@ -18,20 +18,20 @@ console.log("hello world");
 
 //call back functions
 
-function ask(question, yes, no) {
-  if (window.confirm(question)) {
-    yes();
-  } else {
-    no();
-  }
-}
+// function ask(question, yes, no) {
+//   if (window.confirm(question)) {
+//     yes();
+//   } else {
+//     no();
+//   }
+// }
 
-function showYes() {
-  console.log("You agreed");
-  alert("hello rehan !!");
-}
-function showCancel() {
-  console.log("You canceled");
-}
+// function showYes() {
+//   console.log("You agreed");
+//   alert("hello rehan !!");
+// }
+// function showCancel() {
+//   console.log("You canceled");
+// }
 
-ask("shall we proceed", showYes, showCancel);
+// ask("shall we proceed", showYes, showCancel);
