@@ -7,10 +7,19 @@ var students = [
 ];
 
 function enrollStudent(student) {
-  setTimeout(() => {
-    students.push(student);
-    console.log("Student pushed successfully");
-  }, 1000);
+  return new Promise(function (resolve, reject) {
+    setTimeout(() => {
+      students.push(student);
+      console.log("Student pushed successfully");
+
+      var error = false;
+      if (!error) {
+        resolve(); //calling resolve
+      } else {
+        reject();
+      }
+    }, 1000);
+  });
 }
 
 function getstudent() {
@@ -26,5 +35,8 @@ function getstudent() {
 }
 
 let newStudent = { name: "Sunny", subject: "Python" };
-enrollStudent(newStudent);
-getstudent();
+enrollStudent(newStudent)
+  .then(getstudent)
+  .catch(function () {
+    console.log("Error occured ");
+  });
