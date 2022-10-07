@@ -27,10 +27,10 @@ async function getCall() {
 
 let a = getCall();
 a.then((data) => {
-  //   data.map((a) => {
-  //     console.log(a.id);
-  //   });
-  // console.log(data);
+  data.map((a) => {
+    console.log(a.id);
+  });
+  console.log(data);
 
   console.log(data[0]);
 });
